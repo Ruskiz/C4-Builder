@@ -13,15 +13,11 @@ const {
 } = require('./utils.js');
 
 const generateCompleteMD = require('./builders/complete-md.builder');
-
 const generateCompletePDF = require('./builders/complete-pdf.builder');
-
+const generateAzureCompleteMD = require('./builders/azure-complete-md.builder');
 const generateMD = require('./builders/per-folder-md.builder');
-
 const generatePDF = require('./builders/per-folder-pdf.builder');
-
 const generateWebMD = require('./builders/docsify-md.builder');
-
 
 const generateTree = async (dir, options) => {
     let tree = [];
@@ -172,6 +168,11 @@ const build = async (options) => {
             process.stdout.write(`processed ${count}/${total} files\r`);
         });
         console.log('');
+    }
+
+    if(options.GENERATE_AZURE_COMPLETE_MD_FILE){
+        console.log(chalk.blue('generating complete md file for Azure'));
+        await generateAzureCompleteMD(tree, options)
     }
 
     console.log(chalk.green(`built in ${(new Date() - start_date) / 1000} seconds`));

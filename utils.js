@@ -1,5 +1,6 @@
 const fs = require('fs');
 const zlib = require('zlib');
+const path = require('path');
 
 const getFolderName = (dir, root, homepage) => {
     return dir === root ? homepage : path.parse(dir).base;

@@ -31,6 +31,7 @@ const getOptions = conf => {
         GENERATE_PDF: conf.get('generatePDF'),
         GENERATE_WEBSITE: conf.get('generateWEB'),
         GENERATE_COMPLETE_MD_FILE: conf.get('generateCompleteMD'),
+        GENERATE_AZURE_COMPLETE_MD_FILE: conf.get('generateAzureCompleteMD'),
         GENERATE_COMPLETE_PDF_FILE: conf.get('generateCompletePDF'),
         GENERATE_LOCAL_IMAGES: conf.get('generateLocalImages'),
         ROOT_FOLDER: conf.get('rootFolder'),
