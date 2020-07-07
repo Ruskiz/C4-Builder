@@ -1,6 +1,10 @@
 const fs = require('fs');
 const zlib = require('zlib');
 
+const getFolderName = (dir, root, homepage) => {
+    return dir === root ? homepage : path.parse(dir).base;
+};
+
 const makeDirectory = (path) => new Promise((resolve) => {
     fs.mkdir(path, () => {
         return resolve();
@@ -140,5 +144,6 @@ module.exports = {
     writeOnSameLine,
     clearConsole,
     plantUmlServerUrl,
-    plantumlVersions
+    plantumlVersions,
+    getFolderName
 }
