@@ -1,4 +1,5 @@
 const {writeFile, encodeURIPath, plantUmlServerUrl, getFolderName} = require("../utils");
+const path = require('path');
 
 module.exports = async (tree, options, onProgress) => {
     let processedCount = 0;
