@@ -1,9 +1,6 @@
-const {writeFile, plantUmlServerUrl, encodeURIPath} = require("../utils");
+const {writeFile, plantUmlServerUrl, encodeURIPath, getFolderName} = require("../utils");
 const path = require('path');
 
-const getFolderName = (dir, root, homepage) => {
-    return dir === root ? homepage : path.parse(dir).base;
-};
 const build = async (tree, options) => {
 
         let filePromises = [];
