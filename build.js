@@ -15,7 +15,7 @@ const {
 const generateCompleteMD = require('./builders/complete-md.builder');
 const generateCompletePDF = require('./builders/complete-pdf.builder');
 const generateAzureCompleteMD = require('./builders/azure-complete-md.builder');
-const generateMD = require('./builders/per-folder-md.builder');
+const generateMD = require('./builders/azure-per-folder-md.builder');
 const generatePDF = require('./builders/per-folder-pdf.builder');
 const generateWebMD = require('./builders/docsify-md.builder');
 
