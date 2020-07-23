@@ -1,5 +1,6 @@
 const {writeFile, encodeURIPath, plantUmlServerUrl, getFolderName} = require("../utils");
 const docsifyTemplate = require('../docsify.template.js');
+const path = require('path');
 
 module.exports = async (tree, options) => {
     let filePromises = [];

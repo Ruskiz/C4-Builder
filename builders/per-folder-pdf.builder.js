@@ -1,6 +1,7 @@
 const {writeFile, encodeURIPath, plantUmlServerUrl, getFolderName} = require("../utils");
 const markdownpdf = require("md-to-pdf").mdToPdf;
 const fsextra = require('fs-extra');
+const path = require('path');
 
 module.exports = async (tree, options, onProgress) => {
     let processedCount = 0;
